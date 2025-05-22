@@ -1,0 +1,11 @@
+id,name,location,capacity,type,description,availability_status,created_at,updated_at
+1,"Lecture Hall A","Science Building, 1st Floor",120,"LECTURE_HALL","Large lecture hall with tiered seating and advanced AV equipment",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+2,"Main Auditorium","Arts Building, Ground Floor",300,"AUDITORIUM","Spacious auditorium with stage, lighting, and sound system for performances",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+3,"Computer Lab 101","Tech Building, 2nd Floor",30,"LAB","Computer lab with 30 workstations, each equipped with dual monitors",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+4,"Tech Workshop Room","Tech Building, 1st Floor",40,"LAB","Workshop space with modular tables and projection capabilities",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+5,"Conference Room A","Conference Center, 2nd Floor",200,"CONFERENCE_ROOM","Large conference room with divisible sections and presentation equipment",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+6,"Business School Atrium","Business Building, Ground Floor",120,"MULTIPURPOSE","Open atrium space with flexible seating arrangements",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+7,"Campus Green","Main Campus, Central Area",500,"OUTDOOR_SPACE","Large open outdoor space with tent capabilities",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+8,"Indoor Sports Court","Sports Complex, Main Hall",100,"SPORTS_FACILITY","Professional-grade basketball court with spectator seating",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+9,"Meditation Room","Wellness Center, 1st Floor",30,"MULTIPURPOSE","Quiet space with cushions and meditation equipment",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
+10,"Creative Studio","Arts Building, 3rd Floor",20,"CLASSROOM","Studio space with natural lighting and art supplies",true,"2024-01-01 00:00:00","2024-01-01 00:00:00"
