@@ -17,7 +17,9 @@ class SecurityConfig {
             .csrf { it.disable() }
             .authorizeHttpRequests { auth ->
                 // For simplicity in development. In production you'd want to secure these properly
-                auth.requestMatchers("/api/venues/**").permitAll()
+                auth
+                    .requestMatchers("/api/venues/**").permitAll()
+                    .requestMatchers("/api/venues/available").permitAll()
                     .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                     .anyRequest().authenticated()
             }

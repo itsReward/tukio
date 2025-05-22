@@ -156,7 +156,8 @@ class VenueServiceImpl(
             availabilityStatus = this.availabilityStatus,
             amenities = this.amenities.map { it.name },
             createdAt = this.createdAt,
-            updatedAt = this.updatedAt
+            updatedAt = this.updatedAt,
+            imageUrl = this.imageUrl,
         )
     }
 

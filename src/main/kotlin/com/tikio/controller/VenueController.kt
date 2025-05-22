@@ -48,7 +48,7 @@ class VenueController(
         return ResponseEntity.noContent().build()
     }
 
-    @GetMapping("/available")
+    @PostMapping("/available")
     fun findAvailableVenues(@RequestBody request: VenueAvailabilityRequest): ResponseEntity<List<VenueDTO>> {
         return ResponseEntity.ok(venueService.findAvailableVenues(request))
     }

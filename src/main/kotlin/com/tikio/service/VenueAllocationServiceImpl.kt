@@ -1,5 +1,7 @@
 package com.tikio.service
 
+import com.tikio.client.NotificationRequestDTO
+import com.tikio.client.NotificationServiceClient
 import com.tikio.dto.AllocationResponseDTO
 import com.tikio.dto.VenueAllocationRequest
 import com.tikio.exception.VenueAllocationException
@@ -9,9 +11,11 @@ import com.tikio.repository.VenueAmenityRepository
 import com.tikio.repository.VenueBookingRepository
 import com.tikio.repository.VenueRepository
 import org.slf4j.LoggerFactory
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 @Service
 class VenueAllocationServiceImpl(
@@ -19,6 +23,9 @@ class VenueAllocationServiceImpl(
     private val venueAmenityRepository: VenueAmenityRepository,
     private val venueBookingRepository: VenueBookingRepository
 ) : VenueAllocationService {
+
+    @Autowired
+    private lateinit var notificationServiceClient: NotificationServiceClient
 
     private val logger = LoggerFactory.getLogger(VenueAllocationServiceImpl::class.java)
 
@@ -117,9 +124,10 @@ class VenueAllocationServiceImpl(
                 bookingNotes = request.notes
             )
 
-            venueBookingRepository.save(booking)
+            val response = venueBookingRepository.save(booking)
 
             logger.info("Successfully allocated venue ${selectedVenue.id}: ${selectedVenue.name} for event ${request.eventId}")
+
 
             return AllocationResponseDTO(
                 success = true,

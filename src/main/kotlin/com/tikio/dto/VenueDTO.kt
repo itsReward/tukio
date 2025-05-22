@@ -13,5 +13,6 @@ data class VenueDTO(
     val availabilityStatus: Boolean,
     val amenities: List<String>,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
+    val imageUrl: String?
 )
