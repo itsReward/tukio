@@ -8,5 +8,6 @@ data class VenueCreateRequest(
     val capacity: Int,
     val type: VenueType,
     val description: String?,
-    val amenities: List<String>
+    val amenities: List<String>,
+    val imageUrl: String
 )

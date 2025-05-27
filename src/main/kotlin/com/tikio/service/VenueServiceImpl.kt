@@ -41,7 +41,8 @@ class VenueServiceImpl(
             capacity = venueRequest.capacity,
             type = venueRequest.type,
             description = venueRequest.description,
-            amenities = amenities.toMutableSet()
+            amenities = amenities.toMutableSet(),
+            imageUrl = venueRequest.imageUrl
         )
 
         return venueRepository.save(venue).toDTO()
@@ -66,7 +67,7 @@ class VenueServiceImpl(
             venue.amenities.clear()
             venue.amenities.addAll(amenities)
         }
-
+        venueRequest.imgUrl?.let { venue.imageUrl = it }
         venue.updatedAt = LocalDateTime.now()
         return venueRepository.save(venue).toDTO()
     }

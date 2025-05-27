@@ -10,5 +10,6 @@ data class VenueUpdateRequest(
     val type: VenueType?,
     val description: String?,
     val availabilityStatus: Boolean?,
-    val amenities: List<String>?
+    val amenities: List<String>?,
+    val imgUrl: String
 )
